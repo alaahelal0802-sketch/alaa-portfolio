@@ -1,0 +1,109 @@
+@import '@fontsource/archivo/700.css';
+@import '@fontsource/archivo/800.css';
+@import '@fontsource/archivo/900.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: #0b0d14;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ink text-white font-body antialiased;
+    font-size: 17px;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid #c6f24e;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: #7c5cff;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto max-w-site;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+  @media (min-width: 768px) {
+    .wrap {
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+  }
+  .eyebrow {
+    @apply text-lemon font-semibold uppercase;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+  }
+  .btn-lemon {
+    @apply inline-flex items-center gap-2 rounded-full bg-lemon text-ink font-bold transition;
+    min-height: 54px;
+    padding: 0 28px;
+  }
+  .btn-lemon:hover {
+    filter: brightness(1.07);
+  }
+  .link-line {
+    @apply text-white font-medium border-b border-mist pb-1 transition-colors;
+  }
+  .link-line:hover {
+    @apply border-lemon text-lemon;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line text-mist;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+  }
+}
+
+/* Timeline ruler in the hero */
+.ruler {
+  background-image: repeating-linear-gradient(90deg, #3a3f52 0 1px, transparent 1px 16px),
+    repeating-linear-gradient(90deg, #6b7186 0 1px, transparent 1px 128px);
+  background-size: 100% 10px, 100% 22px;
+  background-repeat: no-repeat;
+}
+.playhead {
+  animation: scrub 16s linear infinite;
+}
+@keyframes scrub {
+  from { left: 0; }
+  to { left: 100%; }
+}
+
+/* Faint grid behind the hero */
+.gridbg {
+  background-image: linear-gradient(#232838 1px, transparent 1px), linear-gradient(90deg, #232838 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.35;
+  -webkit-mask-image: radial-gradient(70% 80% at 70% 40%, #000, transparent);
+  mask-image: radial-gradient(70% 80% at 70% 40%, #000, transparent);
+}
+
+.portrait-mask {
+  -webkit-mask-image: radial-gradient(ellipse 62% 70% at 52% 40%, #000 42%, transparent 98%);
+  mask-image: radial-gradient(ellipse 62% 70% at 52% 40%, #000 42%, transparent 98%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .playhead { animation: none; left: 38%; }
+}
