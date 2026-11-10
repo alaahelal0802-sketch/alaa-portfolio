@@ -1,7 +1,7 @@
 {
   "tools": [
     {
-      "name": "Caption Labs",
+      "name": "Caption Labs for After effects",
       "hosts": [
         "After Effects"
       ],
@@ -24,11 +24,10 @@
         "/uploads/caption-labs-ae.jpg"
       ],
       "downloadUrl": "https://alaahelal1.gumroad.com/l/zcyoye",
-      "buttonText": "Buy on Gumroad",
       "price": "$10"
     },
     {
-      "name": "Helal Captions",
+      "name": "Helal Captions for premiere pro",
       "hosts": [
         "Premiere Pro"
       ],
@@ -49,10 +48,7 @@
       ],
       "images": [
         "/images/helal-captions-pr.jpg"
-      ],
-      "downloadUrl": "",
-      "buttonText": "",
-      "price": ""
+      ]
     }
   ]
 }
