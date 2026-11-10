@@ -81,4 +81,5 @@ content:
               - { name: text, label: Feature text, type: string }
           - { name: images, label: Images, type: image, list: true }
           - { name: downloadUrl, label: Download or buy link, type: string }
+          - { name: buttonText, label: Button text (e.g. Buy on Gumroad), type: string }
           - { name: price, label: Price (e.g. Free or $19), type: string }

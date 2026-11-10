@@ -1,11 +1,11 @@
 {
   "tools": [
     {
-      "name": "Helal Captions for premiere pro",
+      "name": "Caption Labs",
       "hosts": [
-        "Premiere Pro"
+        "After Effects"
       ],
-      "text": "Turn speech into styled captions inside your editor. Fast, accurate and editor friendly.",
+      "text": "AI-powered caption generation inside After Effects. Turn speech into styled captions. Fast, accurate and editor friendly.",
       "features": [
         {
           "title": "AI powered",
@@ -21,11 +21,11 @@
         }
       ],
       "images": [
-        "/uploads/ChatGPT_Image_Aug_13,_2026,_20261027145112_3.jpg"
+        "/uploads/caption-labs-ae.jpg"
       ],
-      "downloadUrl": "https://alaahelal1.gumroad.com/l/wazjw?_gl=1*axu8xm*_ga*ODA3NjE3MDcuMTc3ODQ5ODM2Mw..*_ga_6LJN6D94N6*czE3OTQzMDA5MzgkbzM5JGcxJHQxNzk0MzAxMTQ1JGo2MCRsMCRoMA..",
-      "price": "10"
-    },
-    {}
+      "downloadUrl": "https://alaahelal1.gumroad.com/l/zcyoye",
+      "buttonText": "Buy on Gumroad",
+      "price": "$10"
+    }
   ]
 }

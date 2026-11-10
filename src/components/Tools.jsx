@@ -19,7 +19,7 @@ export default function Tools() {
         <div className="mt-14 flex flex-col gap-8">
           {tools.map((t) => (
             <motion.article key={t.name} {...reveal} className="grid items-center gap-10 rounded-3xl border border-line bg-panel p-6 md:p-12 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
-              <div className="grid grid-cols-2 gap-4">
+              <div className={'grid gap-4 ' + ((t.images || []).length > 1 ? 'grid-cols-2' : 'mx-auto w-full max-w-[460px]')}>
                 {(t.images || []).map((src) => (
                   <img key={src} src={src} alt={t.name} className="aspect-square w-full rounded-2xl object-cover" loading="lazy" />
                 ))}
@@ -42,7 +42,7 @@ export default function Tools() {
                 </ul>
                 <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
                   {t.downloadUrl ? (
-                    <a href={t.downloadUrl} target="_blank" rel="noreferrer" className="btn-lemon">Download →</a>
+                    <a href={t.downloadUrl} target="_blank" rel="noreferrer" className="btn-lemon">{t.buttonText || 'Download'} →</a>
                   ) : (
                     <span className="btn-lemon cursor-default opacity-60">Coming soon</span>
                   )}
