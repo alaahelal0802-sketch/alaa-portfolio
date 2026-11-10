@@ -1,7 +1,7 @@
 {
   "tools": [
     {
-      "name": "Helal Captions",
+      "name": "Helal Captions for premiere pro",
       "hosts": [
         "Premiere Pro"
       ],
@@ -25,6 +25,7 @@
       ],
       "downloadUrl": "https://alaahelal1.gumroad.com/l/wazjw?_gl=1*axu8xm*_ga*ODA3NjE3MDcuMTc3ODQ5ODM2Mw..*_ga_6LJN6D94N6*czE3OTQzMDA5MzgkbzM5JGcxJHQxNzk0MzAxMTQ1JGo2MCRsMCRoMA..",
       "price": "10"
-    }
+    },
+    {}
   ]
 }
