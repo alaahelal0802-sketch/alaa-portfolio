@@ -1,0 +1,108 @@
+{
+  "name": "Alaa Helal",
+  "role": "Motion designer & video editor",
+  "status": "Open for projects",
+  "hero": {
+    "eyebrow": "Video editing · Motion · SaaS · AI video",
+    "titleLines": [
+      "I make",
+      "ideas"
+    ],
+    "titleAccent": "move.",
+    "text": "Hi, I'm Alaa. I edit short-form videos, design motion graphics and animate software products. 6+ years in video production.",
+    "primaryButton": "Start a project",
+    "secondaryButton": "See my work",
+    "image": "/images/alaa-portrait.jpg"
+  },
+  "showreel": {
+    "videoId": "AWOY8uthlOo",
+    "title": "My best work in one video."
+  },
+  "about": {
+    "title": [
+      "Clean motion.",
+      "Clear stories."
+    ],
+    "titleAccent": "Fast workflows.",
+    "text": "I'm Alaa, a video editor and motion designer with 6+ years in video production. I work across short-form editing, motion graphics, SaaS and UI animation, and AI video.",
+    "tools": [
+      "After Effects",
+      "Premiere Pro",
+      "Cartoon Animator",
+      "Photoshop",
+      "Illustrator",
+      "ElevenLabs"
+    ]
+  },
+  "contact": {
+    "title": [
+      "Have a project",
+      "in mind?"
+    ],
+    "email": "",
+    "socials": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/@alaahelal96"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/3laahelal"
+      },
+      {
+        "label": "TikTok",
+        "url": "https://www.tiktok.com/@alaahelal9"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/alaa.helal.503"
+      },
+      {
+        "label": "WhatsApp",
+        "url": "https://api.whatsapp.com/send?phone=201559254443"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "name": "Yafta Media",
+      "logo": ""
+    },
+    {
+      "name": "Appweba",
+      "logo": ""
+    },
+    {
+      "name": "Engix",
+      "logo": ""
+    },
+    {
+      "name": "Tawreed X",
+      "logo": ""
+    },
+    {
+      "name": "Coffeekies",
+      "logo": ""
+    },
+    {
+      "name": "Resalty",
+      "logo": ""
+    },
+    {
+      "name": "Jam3ty",
+      "logo": ""
+    },
+    {
+      "name": "Al Khaleejia",
+      "logo": ""
+    },
+    {
+      "name": "Ja3aN",
+      "logo": ""
+    },
+    {
+      "name": "MediWeb",
+      "logo": ""
+    }
+  ]
+}

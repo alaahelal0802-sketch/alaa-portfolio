@@ -20,23 +20,23 @@ export default function Tools() {
           {tools.map((t) => (
             <motion.article key={t.name} {...reveal} className="grid items-center gap-10 rounded-3xl border border-line bg-panel p-6 md:p-12 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
               <div className="grid grid-cols-2 gap-4">
-                {t.images.map((src) => (
+                {(t.images || []).map((src) => (
                   <img key={src} src={src} alt={t.name} className="aspect-square w-full rounded-2xl object-cover" loading="lazy" />
                 ))}
               </div>
               <div>
                 <div className="flex flex-wrap gap-2">
-                  {t.hosts.map((h) => (
+                  {(t.hosts || []).map((h) => (
                     <span key={h} className="rounded-full border border-lemon/35 bg-lemon/10 px-3 py-1 text-xs font-semibold text-lemon">{h}</span>
                   ))}
                 </div>
                 <h2 className="mt-5 font-display font-extrabold leading-none tracking-[-0.03em]" style={{ fontSize: 'clamp(36px, 4vw, 52px)' }}>{t.name}</h2>
                 <p className="mt-4 text-mist" style={{ fontSize: 19 }}>{t.text}</p>
                 <ul className="mt-7 flex flex-col gap-3.5">
-                  {t.features.map(([b, rest], i) => (
-                    <li key={b} className="flex items-baseline gap-3.5">
+                  {(t.features || []).map((f, i) => (
+                    <li key={f.title + i} className="flex items-baseline gap-3.5">
                       <span className="font-bold text-lemon">{String(i + 1).padStart(2, '0')}</span>
-                      <span><b className="font-semibold">{b}</b> <span className="text-mist">{rest}</span></span>
+                      <span><b className="font-semibold">{f.title}</b> <span className="text-mist">{f.text}</span></span>
                     </li>
                   ))}
                 </ul>

@@ -1,0 +1,32 @@
+{
+  "tools": [
+    {
+      "name": "Helal Captions",
+      "hosts": [
+        "After Effects",
+        "Premiere Pro"
+      ],
+      "text": "Turn speech into styled captions inside your editor. Fast, accurate and editor friendly.",
+      "features": [
+        {
+          "title": "AI powered",
+          "text": "transcription to captions"
+        },
+        {
+          "title": "Multiple providers",
+          "text": "Groq (Whisper Turbo) free, ElevenLabs optional"
+        },
+        {
+          "title": "Full control",
+          "text": "over caption style"
+        }
+      ],
+      "images": [
+        "/images/helal-captions-ae.jpg",
+        "/images/helal-captions-pr.jpg"
+      ],
+      "downloadUrl": "",
+      "price": ""
+    }
+  ]
+}

@@ -98,9 +98,10 @@
   mask-image: radial-gradient(70% 80% at 70% 40%, #000, transparent);
 }
 
+/* Soft fade on every side, so the photo never shows a hard edge */
 .portrait-mask {
-  -webkit-mask-image: radial-gradient(ellipse 62% 70% at 52% 40%, #000 42%, transparent 98%);
-  mask-image: radial-gradient(ellipse 62% 70% at 52% 40%, #000 42%, transparent 98%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 58% at 54% 40%, #000 38%, rgba(0,0,0,.55) 62%, transparent 82%);
+  mask-image: radial-gradient(ellipse 50% 58% at 54% 40%, #000 38%, rgba(0,0,0,.55) 62%, transparent 82%);
 }
 
 @media (prefers-reduced-motion: reduce) {

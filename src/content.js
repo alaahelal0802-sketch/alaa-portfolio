@@ -4,50 +4,12 @@
 //  الفيديوهات نفسها بتيجي من قوايم التشغيل على يوتيوب.
 // ============================================================
 
-export const site = {
-  name: 'Alaa Helal',
-  role: 'Motion designer & video editor',
-  status: 'Open for projects',
+import siteData from './content/site.json'
+import toolsData from './content/tools.json'
 
-  hero: {
-    eyebrow: 'Video editing · Motion · SaaS · AI video',
-    titleLines: ['I make', 'ideas'],
-    titleAccent: 'move.',
-    text: "Hi, I'm Alaa. I edit short-form videos, design motion graphics and animate software products. 6+ years in video production.",
-    primaryButton: 'Start a project',
-    secondaryButton: 'See my work',
-  },
-
-  // الشوريل: حط هنا ID الفيديو من يوتيوب (الجزء اللي بعد v= في اللينك)
-  showreel: {
-    videoId: 'AWOY8uthlOo',
-    title: 'My best work in one video.',
-  },
-
-  about: {
-    title: ['Clean motion.', 'Clear stories.'],
-    titleAccent: 'Fast workflows.',
-    text: "I'm Alaa, a video editor and motion designer with 6+ years in video production. I work across short-form editing, motion graphics, SaaS and UI animation, and AI video.",
-    tools: ['After Effects', 'Premiere Pro', 'Cartoon Animator', 'Photoshop', 'Illustrator', 'ElevenLabs'],
-  },
-
-  contact: {
-    title: ['Have a project', 'in mind?'],
-    // حط إيميلك هنا، مثال: 'hello@alaahelal.com'
-    email: '',
-    // حط لينك كل حساب. اللي ملوش لينك هيفضل باهت ومش بيتداس.
-    socials: [
-      { label: 'YouTube', url: 'https://www.youtube.com/@alaahelal96' },
-      { label: 'Instagram', url: 'https://www.instagram.com/3laahelal' },
-      { label: 'TikTok', url: 'https://www.tiktok.com/@alaahelal9' },
-      { label: 'Facebook', url: 'https://www.facebook.com/alaa.helal.503' },
-      { label: 'WhatsApp', url: 'https://api.whatsapp.com/send?phone=201559254443' },
-    ],
-  },
-
-  // أسماء العملاء (بعدين نبدّلها باللوجوهات)
-  clients: ['Yafta Media', 'Appweba', 'Engix', 'Tawreed X', 'Coffeekies', 'Resalty', 'Jam3ty', 'Al Khaleejia', 'Ja3aN', 'MediWeb'],
-}
+// الكلام بتاع الموقع (الاسم، الصورة، الإيميل، السوشيال، العملاء)
+// بيتعدّل من لوحة التحكم (Pages CMS) أو من ملف src/content/site.json
+export const site = siteData
 
 // ============================================================
 //  أقسام الشغل — كل قسم مربوط بقايمة أو أكتر على يوتيوب
@@ -158,20 +120,6 @@ export const tags = {
 }
 
 // ============================================================
-//  صفحة AI Tools
+//  صفحة AI Tools: بتتعدّل من لوحة التحكم أو من src/content/tools.json
 // ============================================================
-export const tools = [
-  {
-    name: 'Helal Captions',
-    hosts: ['After Effects', 'Premiere Pro'],
-    text: 'Turn speech into styled captions inside your editor. Fast, accurate and editor friendly.',
-    features: [
-      ['AI powered', 'transcription to captions'],
-      ['Multiple providers', 'Groq (Whisper Turbo) free, ElevenLabs optional'],
-      ['Full control', 'over caption style'],
-    ],
-    images: ['/images/helal-captions-ae.jpg', '/images/helal-captions-pr.jpg'],
-    downloadUrl: '', // حط لينك التحميل أو صفحة البيع هنا
-    price: '', // مثال: 'Free' أو '$19'
-  },
-]
+export const tools = toolsData.tools

@@ -24,7 +24,7 @@ function Hero() {
             transition={{ duration: 1.1, ease: EASE }}
           >
             <img
-              src="/images/alaa-portrait.jpg"
+              src={h.image || '/images/alaa-portrait.jpg'}
               alt={'Portrait of ' + site.name}
               className="portrait-mask h-full w-full object-cover object-[50%_15%]"
             />
@@ -204,8 +204,8 @@ function Clients() {
         </motion.div>
         <motion.ul {...reveal} className="mt-9 grid grid-cols-2 overflow-hidden rounded-2xl border border-line sm:grid-cols-3 lg:grid-cols-5">
           {list.map((c) => (
-            <li key={c} className="-mb-px -mr-px flex h-24 items-center justify-center border-b border-r border-line px-3 text-center font-display text-lg font-bold text-mist transition hover:text-white md:h-[120px] md:text-xl">
-              {c}
+            <li key={c.name} className="-mb-px -mr-px flex h-24 items-center justify-center border-b border-r border-line px-4 text-center font-display text-lg font-bold text-mist transition hover:text-white md:h-[120px] md:text-xl">
+              {c.logo ? <img src={c.logo} alt={c.name} className="max-h-12 max-w-[70%] object-contain opacity-80 transition hover:opacity-100" loading="lazy" /> : c.name}
             </li>
           ))}
         </motion.ul>

@@ -1,0 +1,84 @@
+media:
+  input: public/uploads
+  output: /uploads
+
+content:
+  - name: site
+    label: Website text
+    type: file
+    path: src/content/site.json
+    format: json
+    fields:
+      - { name: name, label: Your name, type: string }
+      - { name: role, label: Your role, type: string }
+      - { name: status, label: Status (top right), type: string }
+      - name: hero
+        label: Top of the page (Hero)
+        type: object
+        fields:
+          - { name: image, label: Your photo, type: image }
+          - { name: eyebrow, label: Small line above the title, type: string }
+          - { name: titleLines, label: Title lines (white), type: string, list: true }
+          - { name: titleAccent, label: Last title word (purple), type: string }
+          - { name: text, label: Short text, type: text }
+          - { name: primaryButton, label: Lemon button text, type: string }
+          - { name: secondaryButton, label: Second button text, type: string }
+      - name: showreel
+        label: Showreel
+        type: object
+        fields:
+          - { name: videoId, label: YouTube video ID (after v= in the link), type: string }
+          - { name: title, label: Title, type: string }
+      - name: about
+        label: About
+        type: object
+        fields:
+          - { name: title, label: Title lines (white), type: string, list: true }
+          - { name: titleAccent, label: Last title line (purple), type: string }
+          - { name: text, label: Text, type: text }
+          - { name: tools, label: Tools you use, type: string, list: true }
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - { name: title, label: Title lines, type: string, list: true }
+          - { name: email, label: Email, type: string }
+          - name: socials
+            label: Social links
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Name (e.g. Instagram), type: string }
+              - { name: url, label: Link, type: string }
+      - name: clients
+        label: Clients
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Client name, type: string }
+          - { name: logo, label: Logo (optional), type: image }
+
+  - name: tools
+    label: AI Tools
+    type: file
+    path: src/content/tools.json
+    format: json
+    fields:
+      - name: tools
+        label: Tools
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Tool name, type: string }
+          - { name: hosts, label: Works with (e.g. After Effects), type: string, list: true }
+          - { name: text, label: Short text, type: text }
+          - name: features
+            label: Features
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Feature (bold), type: string }
+              - { name: text, label: Feature text, type: string }
+          - { name: images, label: Images, type: image, list: true }
+          - { name: downloadUrl, label: Download or buy link, type: string }
+          - { name: price, label: Price (e.g. Free or $19), type: string }
