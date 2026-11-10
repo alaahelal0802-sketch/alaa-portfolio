@@ -3,7 +3,6 @@
     {
       "name": "Helal Captions",
       "hosts": [
-        "After Effects",
         "Premiere Pro"
       ],
       "text": "Turn speech into styled captions inside your editor. Fast, accurate and editor friendly.",
@@ -22,11 +21,8 @@
         }
       ],
       "images": [
-        "/images/helal-captions-ae.jpg",
-        "/images/helal-captions-pr.jpg"
-      ],
-      "downloadUrl": "",
-      "price": ""
+        "/uploads/ChatGPT_Image_Aug_13,_2026,_20261027145112_3.jpg"
+      ]
     }
   ]
 }
