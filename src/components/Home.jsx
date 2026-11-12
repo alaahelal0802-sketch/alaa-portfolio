@@ -10,11 +10,6 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="gridbg absolute inset-0" aria-hidden="true" />
-      <div
-        className="absolute -left-16 top-5 h-[560px] w-[560px] md:h-[760px] md:w-[760px]"
-        style={{ background: 'radial-gradient(circle, rgba(124,92,255,.42), transparent 62%)' }}
-        aria-hidden="true"
-      />
       <div className="wrap relative pb-10 pt-2 md:pt-5">
         <div className="grid items-center gap-6 md:grid-cols-[minmax(0,420px)_1fr] md:gap-16 lg:grid-cols-[480px_1fr]">
           <motion.div
@@ -23,10 +18,16 @@ function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.1, ease: EASE }}
           >
+            {/* Purple glow right behind the photo */}
+            <div
+              className="pointer-events-none absolute left-1/2 top-[44%] aspect-square w-[150%] -translate-x-1/2 -translate-y-1/2"
+              style={{ background: 'radial-gradient(circle, rgba(124,92,255,.55) 0%, rgba(124,92,255,.28) 30%, transparent 62%)' }}
+              aria-hidden="true"
+            />
             <img
               src={h.image || '/images/alaa-portrait.jpg'}
               alt={'Portrait of ' + site.name}
-              className="portrait-mask h-full w-full object-cover object-[50%_15%]"
+              className="portrait-mask relative h-full w-full object-cover object-[50%_15%]"
             />
           </motion.div>
           <div>
