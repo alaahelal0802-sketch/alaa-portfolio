@@ -3,6 +3,7 @@
   "role": "Motion designer & video editor",
   "status": "Open for projects",
   "hero": {
+    "image": "/images/alaa-portrait.jpg",
     "eyebrow": "Video editing · Motion · SaaS · AI video",
     "titleLines": [
       "I make",
@@ -11,11 +12,10 @@
     "titleAccent": "move.",
     "text": "Hi, I'm Alaa. I edit short-form videos, design motion graphics and animate software products. 6+ years in video production.",
     "primaryButton": "Start a project",
-    "secondaryButton": "See my work",
-    "image": "/images/alaa-portrait.jpg"
+    "secondaryButton": "See my work"
   },
   "showreel": {
-    "videoId": "AWOY8uthlOo",
+    "videoId": "VlmHxPjw8k4",
     "title": "My best work in one video."
   },
   "about": {
@@ -39,7 +39,6 @@
       "Have a project",
       "in mind?"
     ],
-    "email": "",
     "socials": [
       {
         "label": "YouTube",
@@ -65,44 +64,34 @@
   },
   "clients": [
     {
-      "name": "Yafta Media",
-      "logo": ""
+      "name": "Yafta Media"
     },
     {
-      "name": "Appweba",
-      "logo": ""
+      "name": "Appweba"
     },
     {
-      "name": "Engix",
-      "logo": ""
+      "name": "Engix"
     },
     {
-      "name": "Tawreed X",
-      "logo": ""
+      "name": "Tawreed X"
     },
     {
-      "name": "Coffeekies",
-      "logo": ""
+      "name": "Coffeekies"
     },
     {
-      "name": "Resalty",
-      "logo": ""
+      "name": "Resalty"
     },
     {
-      "name": "Jam3ty",
-      "logo": ""
+      "name": "Jam3ty"
     },
     {
-      "name": "Al Khaleejia",
-      "logo": ""
+      "name": "Al Khaleejia"
     },
     {
-      "name": "Ja3aN",
-      "logo": ""
+      "name": "Ja3aN"
     },
     {
-      "name": "MediWeb",
-      "logo": ""
+      "name": "MediWeb"
     }
   ]
 }
