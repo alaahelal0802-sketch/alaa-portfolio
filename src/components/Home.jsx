@@ -85,7 +85,13 @@ function Hero() {
 function Showreel() {
   const open = usePlayer()
   const r = site.showreel
+  const [ready, setReady] = useState(false)
   if (!r.videoId) return null
+  // Muted, looping preview that starts by itself (browsers allow autoplay only when muted).
+  // Clicking opens the full video with sound.
+  const bg =
+    `https://www.youtube-nocookie.com/embed/${r.videoId}?autoplay=1&mute=1&loop=1&playlist=${r.videoId}` +
+    '&controls=0&disablekb=1&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&fs=0'
   return (
     <section className="pt-6 md:pt-10">
       <div className="wrap">
@@ -94,21 +100,33 @@ function Showreel() {
           type="button"
           onClick={() => open({ id: r.videoId, title: 'Showreel' })}
           className="group relative block aspect-video w-full overflow-hidden rounded-3xl border border-line bg-panel text-left md:aspect-[16/8.2]"
-          aria-label="Play showreel"
+          aria-label="Play showreel with sound"
         >
-          <img src={thumb(r.videoId)} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-[1.2s] ease-out group-hover:scale-[1.04]" />
-          <span className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent" />
-          <span className="absolute inset-0 flex items-center justify-center">
-            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-lemon shadow-[0_0_0_14px_rgba(198,242,78,.18)] transition duration-500 group-hover:scale-110 md:h-[120px] md:w-[120px]">
-              <svg viewBox="0 0 24 24" className="ml-1.5 h-8 w-8 fill-ink md:h-11 md:w-11"><path d="M6 4l15 8-15 8z" /></svg>
-            </span>
+          <img src={thumb(r.videoId)} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <span className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <iframe
+              src={bg}
+              title="Showreel preview"
+              tabIndex={-1}
+              allow="autoplay; encrypted-media"
+              onLoad={() => setTimeout(() => setReady(true), 1200)}
+              className={'absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 scale-[1.18] transition-opacity duration-700 ' + (ready ? 'opacity-100' : 'opacity-0')}
+              style={{ border: 0, aspectRatio: '16 / 9', height: 'auto' }}
+            />
           </span>
+          <span className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent" />
           <span className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4 md:inset-x-10 md:bottom-9">
             <span>
               <span className="eyebrow block">Showreel</span>
               <span className="mt-2 block font-display font-extrabold tracking-[-0.03em]" style={{ fontSize: 'clamp(24px, 3.4vw, 44px)' }}>{r.title}</span>
             </span>
-            <span className="hidden text-sm text-white/80 sm:block">Sound on</span>
+            <span className="flex shrink-0 items-center gap-3 rounded-full bg-lemon py-2 pl-2 pr-5 font-semibold text-ink shadow-[0_0_0_8px_rgba(198,242,78,.15)] transition duration-500 group-hover:scale-105">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink">
+                <svg viewBox="0 0 24 24" className="ml-0.5 h-4 w-4 fill-lemon"><path d="M6 4l15 8-15 8z" /></svg>
+              </span>
+              <span className="hidden sm:inline">Watch with sound</span>
+              <span className="sm:hidden">Play</span>
+            </span>
           </span>
         </motion.button>
       </div>
